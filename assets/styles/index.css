@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "inter-bold";
+  @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+}
+@font-face {
+  font-family: "Merriweather";
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+}
+@font-face {
+  font-family: "Montserrat";
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+a:visited {
+  color: rgb(243, 243, 243);
+}
+
+body {
+  background: linear-gradient(to left, #283593, #1976d2);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.btn {
+  background: none;
+  border: 2px solid rgb(17, 17, 17);
+  color: rgb(17, 17, 17);
+  height: 45px;
+  width: 170px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: "inter-bold", sans-serif;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.btn:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+  font-weight: bolder;
+}
+
+header {
+  max-height: 100vh;
+  text-transform: capitalize;
+}
+header .TopHeader {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  -moz-column-gap: 5%;
+       column-gap: 5%;
+  align-items: center;
+  margin-bottom: -100px;
+}
+header .TopHeader .imgHeader {
+  display: flex;
+  justify-content: end;
+  height: 50%;
+}
+header .TopHeader .imgHeader #pp {
+  border-radius: 150px;
+}
+header .TopHeader .txtHeader {
+  font-family: "inter-bold", sans-serif;
+  display: flex;
+  justify-content: start;
+  font-weight: 600;
+}
+header .BottomHeader {
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-family: "inter-bold", sans-serif;
+  font-weight: 400;
+}
+header .BottomHeader p {
+  line-height: 2.5rem;
+  margin: 0 auto 100px;
+}
+header .BottomHeader span {
+  margin-top: 10%;
+  border: 2px solid white;
+  border-radius: 50px;
+  height: 80px;
+  width: 80px;
+  font-size: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+main .projets h3 {
+  font-family: "inter-bold", sans-serif;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10%;
+}
+main .projets .card-group {
+  display: flex;
+  flex-direction: column;
+}
+main .projets .card-group .card {
+  height: 270px;
+  width: 270px;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  /* This will produce the blur */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.087);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 70% 30%;
+  align-items: end;
+  justify-content: start;
+  justify-items: center;
+  transition: transform 0.3s ease;
+  margin: 5% auto;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+main .projets .card-group .card:hover {
+  transform: scale(1.1);
+}
+main .projets .card-group .card .imgCard {
+  max-height: 150px;
+}
+main .projets .card-group .card h2 {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  text-transform: capitalize;
+  margin-bottom: 10%;
+}
+main .skills {
+  color: black;
+}
+main .skills .technologies h3 {
+  font-family: "inter-bold", sans-serif;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10%;
+}
+main .skills .technologies ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+main .skills .technologies ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: capitalize;
+  font-family: "Merriweather", serif;
+  height: 100px;
+}
+main .skills .technologies ul i {
+  color: #fba52d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+main .skills .addskills {
+  margin-bottom: 10%;
+}
+main .skills .addskills h3 {
+  font-family: "inter-bold", sans-serif;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10%;
+}
+main .skills .addskills ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-left: 10%;
+  font-family: "Merriweather", serif;
+  text-transform: capitalize;
+  line-height: 2rem;
+}
+main .about {
+  margin-bottom: 100px;
+  font-family: "Merriweather", serif;
+  line-height: 2rem;
+  width: 100%;
+}
+main .about h3 {
+  font-family: "inter-bold", sans-serif;
+  color: rgb(243, 243, 243);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10%;
+}
+main .about .years {
+  display: flex;
+  margin-bottom: 100px;
+}
+main .about .years ul {
+  margin-left: 5%;
+  position: relative;
+  max-width: 30%;
+}
+main .about .years ul:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 90%;
+  background-color: black;
+  top: 20px;
+  left: -10px;
+}
+main .about .years li {
+  margin-left: 5%;
+}
+main .about button {
+  margin: 0 auto;
+  padding: 2em 4em;
+  background-color: #161a20;
+  border: none;
+  color: rgb(243, 243, 243);
+  border-radius: 1000px;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  position: relative;
+  cursor: pointer;
+  transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .about button:after {
+  content: "";
+  position: absolute;
+  height: 107%;
+  width: 102%;
+  border-radius: 1000px;
+  background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+  z-index: -1;
+  transition: transform 0.2s ease;
+}
+main .about button:hover {
+  z-index: 0;
+  box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: rgb(17, 17, 17);
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .socialnetworks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -moz-column-gap: 100px;
+       column-gap: 100px;
+}
+footer .socialnetworks i {
+  font-size: 1.3rem;
+}/*# sourceMappingURL=index.css.map */

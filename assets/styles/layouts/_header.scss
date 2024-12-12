@@ -1,0 +1,60 @@
+header {
+    max-height: 100vh;
+    text-transform: capitalize;
+
+    .TopHeader {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        column-gap: 5%;
+        align-items: center;
+        margin-bottom: -100px;
+
+        .imgHeader {
+            display: flex;
+            justify-content: end;
+            height: 50%;
+
+            #pp {
+                border-radius: 150px;
+
+            }
+        }
+
+        .txtHeader {
+            font-family: "inter-bold", sans-serif;
+            display: flex;
+            justify-content: start;
+            font-weight: 600;
+
+        }
+    }
+
+    .BottomHeader {
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.3rem;
+        font-family: $font1;
+        font-weight: 400;
+
+
+        p {
+            line-height: 2.5rem;
+            margin: 0 auto 100px;
+
+        }
+
+        span {
+            margin-top: 10%;
+            border: 2px solid white;
+            border-radius: 50px;
+            height: 80px;
+            width: 80px;
+            font-size: 2.4rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+    }
+}

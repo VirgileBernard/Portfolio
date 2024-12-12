@@ -1,0 +1,79 @@
+@font-face {
+    font-family: "inter-bold";
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+}
+
+@font-face {
+    font-family: "Merriweather";
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+}
+
+
+
+$font1: "inter-bold", sans-serif;
+$font2: "Merriweather", serif;
+$font3: "Montserrat", serif;
+$black1: rgb(17, 17, 17);
+$white1: rgb(243, 243, 243);
+$grey1: rgb(209, 209, 209);
+$grey2: rgb(233, 233, 233);
+$grey3: rgb(105, 105, 105);
+
+@mixin title {
+    font-family: $font1;
+    color: $white1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a,
+a:visited {
+    color: $white1;
+}
+
+body {
+    background: linear-gradient(to left, #283593, #1976d2);
+    color: rgba(255, 255, 255, 0.82);
+}
+
+//   réglage pour tous mes boutons
+.btn {
+    background: none;
+    border: 2px solid $black1;
+    color: $black1;
+    height: 45px;
+    width: 170px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    // inclure la mixin aux btn
+    @include title;
+
+
+    &:hover {
+        // faire grossir le bouton
+        transform: scale(1.05);
+        // transition smooth
+        transition: 0.3s;
+        // faire grossir le texte
+        font-weight: bolder;
+    }
+}

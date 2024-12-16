@@ -1,17 +1,21 @@
 main {
     .projets {
+
         h3 {
             @include title;
-            padding: 10%;
+            margin-top: 100px;
+            margin-bottom: 75px;
         }
 
         .card-group {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            max-width: 80vw;
+            margin: 0 auto;
 
             .card {
-                height: 270px;
-                width: 270px;
+                cursor: pointer;
+                max-width: 80%;
                 border-radius: 25px;
                 background: rgba(255, 255, 255, 0.2);
                 backdrop-filter: blur(30px);
@@ -19,32 +23,34 @@ main {
                 border: 2px solid rgba(255, 255, 255, 0.1);
                 box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.087);
                 overflow: hidden;
+                font-family: $font3;
+                // display à l'intérieur de la carte
                 display: grid;
                 grid-template-columns: 100%;
                 grid-template-rows: 70% 30%;
-                align-items: end;
-                justify-content: start;
-                justify-items: center;
+                margin: 10% auto;
+
+
                 transition: transform 0.3s ease;
-                margin: 5% auto;
-                margin-bottom: 50px;
-                font-family: "Montserrat", sans-serif;
+
 
                 &:hover {
-                    transform: scale(1.1);
+                    transform: scale(1.05);
                 }
 
                 .imgCard {
-                    max-height: 150px;
+                    max-width: 95%;
+                    margin: 2rem auto;
                 }
 
                 h2 {
                     width: 100%;
                     display: flex;
-                    text-align: center;
-                    justify-content: center;
                     text-transform: capitalize;
-                    margin-bottom: 10%;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1rem;
+                    margin-top: 10%;
 
                 }
             }
@@ -52,12 +58,23 @@ main {
     }
 
     .skills {
-        color: black;
+        color: $black1;
 
         .technologies {
+            margin: 0 auto;
+            margin-left: 10px;
+
+            @media screen and (min-width: 768px) {
+                // réglages pour tablettes
+                max-width: 70vw;
+                margin: 0 auto;
+            }
+
             h3 {
                 @include title;
-                padding: 10%;
+                margin-top: 100px;
+                margin-bottom: 75px;
+
             }
 
             ul {
@@ -70,9 +87,10 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    text-transform: capitalize;
-                    font-family: $font2;
+                    text-transform: uppercase;
+                    font-family: $font3;
                     height: 100px;
+                    font-size: 1.3rem;
 
                 }
 
@@ -81,55 +99,68 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    font-size: 1.3rem;
+                    font-size: 2rem;
 
                 }
-
-                // .fa-solid {
-                //     color: #fba52d;
-                //     border: 1px solid black;
-                // }
             }
         }
 
         .addskills {
-            margin-bottom: 10%;
+            margin-bottom: 100px;
 
             h3 {
                 @include title;
-                padding: 10%;
+                margin-top: 100px;
+                margin-bottom: 75px;
+
             }
 
             ul {
                 display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                margin-left: 10%;
-                font-family: $font2;
+                justify-items: center;
+                grid-template-columns: 33% 33% 33%;
+                font-family: $font3 ;
                 text-transform: capitalize;
-                line-height: 2rem;
+                max-width: 90vw;
+                margin: 0 auto;
+
+                li {
+                    font-size: 1.3rem;
+                    line-height: 3rem;
+                }
             }
         }
     }
 
     .about {
-        margin-bottom: 100px;
         font-family: $font2;
-        line-height: 2rem;
-        width: 100%;
+        line-height: 2.5rem;
+
 
         h3 {
             @include title;
-            padding: 10%;
+            margin-top: 100px;
+            margin-bottom: 75px;
+
         }
 
         .years {
-            display: flex;
-            margin-bottom: 100px;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 33% 33% 33%;
+            font-family: $font3 ;
+            max-width: 90vw;
+            margin: 0 auto;
+
 
             ul {
+                margin: 0 auto;
                 margin-left: 5%;
                 position: relative;
-                max-width: 30%;
+                font-size: 1.3rem;
+                font-family: $font3;
+                color: $black1;
+                max-width: 500px;
             }
 
             ul:before {
@@ -137,16 +168,25 @@ main {
                 position: absolute;
                 width: 2px;
                 height: 90%;
-                background-color: black;
+                background-color: $black1;
                 top: 20px;
                 left: -10px;
             }
 
             li {
                 margin-left: 5%;
+                color: $black1;
             }
+        }
 
-
+        p {
+            color: $black1;
+            font-family: $font3;
+            font-size: 1.4rem;
+            line-height: 3rem;
+            max-width: 80vw;
+            margin: 100px auto;
+            font-style: italic;
         }
 
         button {
@@ -156,31 +196,32 @@ main {
             border: none;
             color: $white1;
             border-radius: 1000px;
-            font-family: $font2;
+            font-family: $font1;
             text-transform: uppercase;
             position: relative;
             cursor: pointer;
-            transition: 2s;
+            transition: 0.5s;
+            margin-bottom: 75px;
 
             // pour que l'after se mette bien dans le button
             display: flex;
             justify-content: center;
             align-items: center;
 
+            // contour du btn avec un dégradé
             &:after {
                 content: "";
                 position: absolute;
                 height: 107%;
                 width: 102%;
                 border-radius: 1000px;
-                background-image: linear-gradient(to bottom right, #008cff, #e100ff);
+                background-image: linear-gradient(to bottom right, #ffea00, #7e00ec);
                 z-index: -1;
-                transition: transform 0.2s ease;
+                transition: transform linear;
             }
 
             &:hover {
                 z-index: 0;
-                box-shadow: 40px 0 100px #008cff, -40px 0 100px #e100ff;
                 transform: scale(1.2);
             }
         }

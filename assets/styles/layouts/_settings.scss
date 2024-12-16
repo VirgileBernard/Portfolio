@@ -1,34 +1,39 @@
-@font-face {
-    font-family: "inter-bold";
-    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
-}
-
-@font-face {
-    font-family: "Merriweather";
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-}
+// font-family: "inter-bold";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
 
-$font1: "inter-bold", sans-serif;
+// font-family: "Merriweather";
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+
+
+
+// font-family: 'Montserrat';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+// font-family:"Confortaa";
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+
+
+
+
+$font1: "inter", serif;
 $font2: "Merriweather", serif;
 $font3: "Montserrat", serif;
+$font4: "comfortaa", sans-serif;
 $black1: rgb(17, 17, 17);
 $white1: rgb(243, 243, 243);
-$grey1: rgb(209, 209, 209);
-$grey2: rgb(233, 233, 233);
-$grey3: rgb(105, 105, 105);
+$white2: rgb(233, 233, 233);
+
 
 @mixin title {
-    font-family: $font1;
-    color: $white1;
+    font-family: $font4;
+    color: $white2;
     letter-spacing: 2px;
     text-transform: uppercase;
+    text-align: center;
+    font-size: 1.8rem;
+
 }
 
 * {
@@ -51,29 +56,30 @@ a:visited {
 }
 
 body {
-    background: linear-gradient(to left, #283593, #1976d2);
+    background: linear-gradient(to left, #1023b3eb, #1976d2b3);
     color: rgba(255, 255, 255, 0.82);
 }
 
-//   réglage pour tous mes boutons
-.btn {
-    background: none;
-    border: 2px solid $black1;
-    color: $black1;
-    height: 45px;
-    width: 170px;
-    font-size: 0.75rem;
-    cursor: pointer;
-    // inclure la mixin aux btn
-    @include title;
+// réglage pour tous mes boutons 
+
+// .btn {
+//     background: none;
+//     border: 2px solid $black1;
+//     color: $black1;
+//     height: 45px;
+//     width: 170px;
+//     font-size: 0.75rem;
+//     cursor: pointer;
+//     // inclure la mixin aux btn
+//     @include title;
 
 
-    &:hover {
-        // faire grossir le bouton
-        transform: scale(1.05);
-        // transition smooth
-        transition: 0.3s;
-        // faire grossir le texte
-        font-weight: bolder;
-    }
-}
+//     &:hover {
+//         // faire grossir le bouton
+//         transform: scale(1.05);
+//         // transition smooth
+//         transition: 0.3s;
+//         // faire grossir le texte
+//         font-weight: bolder;
+//     }
+// }

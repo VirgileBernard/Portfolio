@@ -83,3 +83,74 @@ body {
 //         font-weight: bolder;
 //     }
 // }
+
+// animation photo et texte header
+@keyframes opacity {
+    from {
+        opacity: 0;
+        scale: 0.75;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+// animation texte bottom header
+@keyframes slideRight {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+}
+
+// animation nav header
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+// animation span
+@keyframes wiggle {
+    0% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50px);
+        opacity: 1;
+    }
+}
+
+// animation cards
+@keyframes cards {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}

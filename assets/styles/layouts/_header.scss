@@ -11,6 +11,10 @@ header {
     .navheader {
         font-family: $font3;
         font-size: 1.5rem;
+        opacity: 0;
+        animation: slideDown 2s ease-in-out 1.5s 1 forwards;
+
+
 
 
         ul {
@@ -18,6 +22,15 @@ header {
             grid-template-columns: 33% 33% 33%;
             text-align: center;
             margin-top: 3%;
+
+            li {
+                transition: transform 0.3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 1;
+                }
+            }
         }
 
     }
@@ -28,13 +41,24 @@ header {
 
         align-items: center;
 
+
+
         .imgHeader {
             display: flex;
             justify-content: end;
             height: 50%;
 
+
             #pp {
                 border-radius: 150px;
+                transition: transform 0.5s ease-in-out;
+                animation: opacity 3s ease 0s forwards;
+                opacity: 0;
+
+                &:hover {
+                    transform: scale(1.2);
+                    z-index: 1;
+                }
 
             }
         }
@@ -46,6 +70,15 @@ header {
             text-align: center;
             font-size: 1.5rem;
             margin-right: 60%;
+            animation: opacity 3s ease 1s 1 forwards;
+            opacity: 0;
+
+            transition: transform 0.5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.2);
+            }
+
 
         }
     }
@@ -58,6 +91,8 @@ header {
 
 
         p {
+            opacity: 0;
+            animation: slideRight 1s ease-in 2s 1 normal forwards;
             line-height: 2.5rem;
             margin: 0 auto;
 
@@ -86,6 +121,9 @@ header {
             justify-content: center;
             align-items: center;
             margin: 100px auto;
+            animation: wiggle 2s ease-out 3s infinite;
+            opacity: 0;
+
         }
     }
 }

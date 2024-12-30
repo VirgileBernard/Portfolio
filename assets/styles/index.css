@@ -154,7 +154,7 @@ header .BottomHeader span {
 }
 
 main .projets {
-  max-width: 70vw;
+  max-width: 75vw;
   margin: 0 auto;
 }
 @media screen and (min-width: 720px) {
@@ -224,13 +224,19 @@ main .projets .card-projet .projet1 img:hover {
   transform: scale(1.05);
 }
 main .projets .card-projet .projet1 div h2 {
-  font-family: "comfortaa", sans-serif;
-  color: rgb(233, 233, 233);
+  font-family: "inter", serif;
+  color: rgb(17, 17, 17);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.3rem;
   margin-top: 10%;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 720px) {
+  main .projets .card-projet .projet1 div h2 {
+    font-size: 1.5rem;
+  }
 }
 main .projets .card-projet .projet1 div p {
   font-family: "comfortaa", sans-serif;
@@ -261,13 +267,19 @@ main .projets .card-projet .projet2 img:hover {
   transform: scale(1.05);
 }
 main .projets .card-projet .projet2 div h2 {
-  font-family: "comfortaa", sans-serif;
-  color: rgb(233, 233, 233);
+  font-family: "inter", serif;
+  color: rgb(17, 17, 17);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.3rem;
   margin-top: 10%;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 720px) {
+  main .projets .card-projet .projet2 div h2 {
+    font-size: 1.5rem;
+  }
 }
 main .projets .card-projet .projet2 div p {
   font-family: "comfortaa", sans-serif;
@@ -297,13 +309,19 @@ main .projets .card-projet .projet3 img:hover {
   transform: scale(1.05);
 }
 main .projets .card-projet .projet3 div h2 {
-  font-family: "comfortaa", sans-serif;
-  color: rgb(233, 233, 233);
+  font-family: "inter", serif;
+  color: rgb(17, 17, 17);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
   font-size: 1.3rem;
   margin-top: 10%;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 720px) {
+  main .projets .card-projet .projet3 div h2 {
+    font-size: 1.5rem;
+  }
 }
 main .projets .card-projet .projet3 div p {
   font-family: "comfortaa", sans-serif;
@@ -318,112 +336,146 @@ main .projets .card-projet .projet3 div p span {
     display: none;
   }
 }
-main .skills {
-  color: rgb(243, 243, 243);
-}
-main .skills .technologies {
+main .aboutme {
+  border: 2px solid white;
+  border-radius: 50px;
+  max-width: 75vw;
   margin: 0 auto;
-  margin-left: 10px;
+  margin-bottom: 5%;
 }
-@media screen and (min-width: 768px) {
-  main .skills .technologies {
-    max-width: 70vw;
-    margin: 0 auto;
+main .aboutme .topabout .me h3 {
+  font-family: "inter", serif;
+  color: rgb(17, 17, 17);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  margin-bottom: 5%;
+}
+@media screen and (min-width: 720px) {
+  main .aboutme .topabout .me h3 {
+    font-size: 1.5rem;
   }
 }
-main .skills .technologies h3 {
-  font-family: "inter", serif;
-  color: rgb(233, 233, 233);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 75px;
-  margin-top: 100px;
-  margin-bottom: 75px;
-}
-main .skills .technologies ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  width: 100%;
-}
-main .skills .technologies ul li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
+main .aboutme .topabout .texte p {
   font-family: "Montserrat", serif;
-  height: 100px;
-  font-size: 1.3rem;
+  line-height: 2.5rem;
+  max-width: 90%;
+  margin: 0 auto;
+  color: rgb(243, 243, 243);
+  font-size: 1rem;
 }
-main .skills .technologies ul i {
-  color: #fba52d;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  transition: transform 1.5s ease-in-out;
+@media screen and (min-width: 720px) {
+  main .aboutme .topabout .texte p {
+    font-size: 1.3rem;
+    line-height: 3rem;
+    font-style: italic;
+  }
 }
-main .skills .addskills {
-  margin-bottom: 100px;
+@media screen and (min-width: 1100px) {
+  main .aboutme .bottomabout {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-areas: "aboutme" "skill";
+  }
 }
-main .skills .addskills h3 {
+main .aboutme .bottomabout .addskill {
+  justify-items: center;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+main .aboutme .bottomabout .addskill h3 {
   font-family: "inter", serif;
-  color: rgb(233, 233, 233);
+  color: rgb(17, 17, 17);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 75px;
-  margin-top: 100px;
-  margin-bottom: 75px;
+  font-size: 1.3rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
-main .skills .addskills ul {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 33% 33% 33%;
+@media screen and (min-width: 720px) {
+  main .aboutme .bottomabout .addskill h3 {
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  main .aboutme .bottomabout .addskill h3 {
+    margin-bottom: 20%;
+  }
+}
+main .aboutme .bottomabout .addskill ul {
+  min-height: 15vh;
+  width: 90%;
+  margin: 0 auto;
   font-family: "Montserrat", serif;
   text-transform: capitalize;
-  max-width: 90vw;
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 720px) {
+  main .aboutme .bottomabout .addskill ul {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1100px) {
+  main .aboutme .bottomabout .addskill ul {
+    display: grid;
+    grid-template-columns: 9fr;
+    grid-gap: 15%;
+  }
+  main .aboutme .bottomabout .addskill ul li {
+    margin-bottom: 5%;
+    height: 100%;
+  }
+}
+main .aboutme .bottomabout .years {
+  grid-area: aboutme;
+  display: grid;
+  justify-items: center;
+  font-family: "Montserrat", serif;
+  width: 90%;
   margin: 0 auto;
+  margin-bottom: 5%;
 }
-main .skills .addskills ul li {
-  font-size: 1.3rem;
-  line-height: 3rem;
-}
-main .about {
-  font-family: "Merriweather", serif;
-  line-height: 2.5rem;
-}
-main .about h3 {
+main .aboutme .bottomabout .years h3 {
   font-family: "inter", serif;
-  color: rgb(233, 233, 233);
+  color: rgb(17, 17, 17);
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 75px;
-  margin-top: 100px;
-  margin-bottom: 75px;
+  font-size: 1.3rem;
+  margin-top: 10%;
+  margin-bottom: 5%;
 }
-main .about .years {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: 33% 33% 33%;
-  font-family: "Montserrat", serif;
-  max-width: 90vw;
-  margin: 0 auto;
+@media screen and (min-width: 720px) {
+  main .aboutme .bottomabout .years h3 {
+    font-size: 1.5rem;
+  }
 }
-main .about .years ul {
+main .aboutme .bottomabout .years ul {
   margin: 0 auto;
   margin-left: 5%;
   position: relative;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-family: "Montserrat", serif;
   color: rgb(243, 243, 243);
-  max-width: 500px;
+  min-width: 100%;
+  margin-bottom: 5%;
+  line-height: 2.5rem;
 }
-main .about .years ul:before {
+@media screen and (min-width: 720px) {
+  main .aboutme .bottomabout .years ul {
+    font-size: 1.3rem;
+  }
+}
+main .aboutme .bottomabout .years ul:before {
   content: "";
   position: absolute;
   width: 2px;
@@ -432,20 +484,16 @@ main .about .years ul:before {
   top: 20px;
   left: -10px;
 }
-main .about .years li {
-  margin-left: 5%;
-  color: rgb(233, 233, 233);
+main .aboutme .bottomabout .years li {
+  font-size: 1rem;
 }
-main .about p {
-  color: rgb(243, 243, 243);
-  font-family: "Montserrat", serif;
-  font-size: 1.4rem;
-  line-height: 3rem;
-  max-width: 80vw;
-  margin: 100px auto;
-  font-style: italic;
+@media screen and (min-width: 720px) {
+  main .aboutme .bottomabout .years li {
+    font-size: 1.3rem;
+  }
 }
-main .about button {
+main .aboutme button {
+  display: block;
   margin: 0 auto;
   padding: 2em 4em;
   background-color: #161a20;
@@ -454,25 +502,11 @@ main .about button {
   border-radius: 1000px;
   font-family: "inter", serif;
   text-transform: uppercase;
-  position: relative;
   cursor: pointer;
   transition: 0.5s;
   margin-bottom: 75px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-main .about button:after {
-  content: "";
-  position: absolute;
-  height: 107%;
-  width: 102%;
-  border-radius: 1000px;
-  background-image: linear-gradient(to bottom right, #ffea00, #7e00ec);
-  z-index: -1;
-  transition: transform linear;
-}
-main .about button:hover {
+main .aboutme button:hover {
   z-index: 0;
   transform: scale(1.2);
 }

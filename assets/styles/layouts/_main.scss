@@ -1,70 +1,10 @@
 main {
-    // .projets {
 
-    //     h3 {
-    //         @include title;
-    //         margin-top: 100px;
-    //     }
-
-    //     .card-group {
-    //         display: grid;
-    //         grid-template-columns: 50% 50%;
-    //         max-width: 80vw;
-    //         margin: 0 auto;
-    //         animation: cards;
-    //         // faire en sorte que l'animation se déroule que quand l'élément est visible
-    //         animation-timeline: view();
-    //         // l'animation commence à entry 0 (qd 0% de la carte est visible à l'écran) et fini à 80% (quand 80% de la carte est visible à l'écran)
-    //         animation-range: entry 10% cover 50%;
-
-    //         .card {
-    //             cursor: pointer;
-    //             max-width: 80%;
-    //             border-radius: 25px;
-    //             background: rgba(255, 255, 255, 0.2);
-    //             backdrop-filter: blur(30px);
-    //             /* This will produce the blur */
-    //             border: 2px solid rgba(255, 255, 255, 0.1);
-    //             box-shadow: 0 0 5px 10px rgba(0, 0, 0, 0.087);
-    //             overflow: hidden;
-    //             font-family: $font3;
-    //             // display à l'intérieur de la carte
-    //             display: grid;
-    //             grid-template-columns: 100%;
-    //             grid-template-rows: 70% 30%;
-    //             margin: 10% auto;
-
-
-    //             transition: transform 0.3s ease;
-
-
-    //             &:hover {
-    //                 transform: scale(1.05);
-    //             }
-
-    //             .imgCard {
-    //                 max-width: 95%;
-    //                 margin: 2rem auto;
-    //             }
-
-    //             h2 {
-    //                 width: 100%;
-    //                 display: flex;
-    //                 text-transform: capitalize;
-    //                 justify-content: center;
-    //                 align-items: center;
-    //                 font-size: 1rem;
-    //                 margin-top: 10%;
-
-    //             }
-    //         }
-    //     }
-    // }
 
 
     // test
     .projets {
-        max-width: 70vw;
+        max-width: 75vw;
         margin: 0 auto;
 
         @media screen and (min-width: 720px) {
@@ -262,145 +202,176 @@ main {
 
     }
 
-    .skills {
-        color: $white1;
+    .aboutme {
+        border: 2px solid white;
+        border-radius: 50px;
+        max-width: 75vw;
+        margin: 0 auto;
+        margin-bottom: 5%;
 
-        .technologies {
-            margin: 0 auto;
-            margin-left: 10px;
-
-            @media screen and (min-width: 768px) {
-                // réglages pour tablettes
-                max-width: 70vw;
-                margin: 0 auto;
-            }
-
-            h3 {
-                @include title;
-                margin-top: 100px;
-                margin-bottom: 75px;
-
-            }
-
-            ul {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-                width: 100%;
+        .topabout {
 
 
-                li {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-transform: uppercase;
-                    font-family: $font3;
-                    height: 100px;
-                    font-size: 1.3rem;
+            .me {
+                h3 {
+
+                    @include subtitle;
+                    margin-bottom: 5%;
+
+
 
                 }
+            }
 
-                i {
-                    color: #fba52d;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    font-size: 2rem;
-                    transition: transform 1.5s ease-in-out;
+            .texte {
+                p {
 
-                    // &:hover {
-                    //     transform: rotate(360deg);
-                    // }
+                    font-family: $font3;
+                    line-height: 2.5rem;
+                    max-width: 90%;
+                    margin: 0 auto;
+                    color: $white1;
+                    font-size: 1rem;
 
 
+                    @media screen and (min-width: 720px) {
+                        //     // réglages pour tablettes
+                        font-size: 1.3rem;
+                        line-height: 3rem;
+                        font-style: italic;
+                    }
                 }
             }
         }
 
-        .addskills {
-            margin-bottom: 100px;
+        .bottomabout {
+            @media screen and (min-width: 1100px) {
 
-            h3 {
-                @include title;
-                margin-top: 100px;
-                margin-bottom: 75px;
+                // réglages pour tablettes
+                display: grid;
+                grid-template-columns: 45% 55%;
+                grid-template-areas: "aboutme" "skill";
+
 
             }
 
-            ul {
+            .addskill {
+
+                justify-items: center;
+                margin: 0 auto;
+                margin-bottom: 5%;
+
+                h3 {
+                    @include subtitle;
+
+                    @media screen and (min-width: 1100px) {
+                        margin-bottom: 20%;
+                    }
+
+
+
+                }
+
+                ul {
+                    min-height: 15vh;
+                    width: 90%;
+                    margin: 0 auto;
+                    font-family: $font3;
+                    text-transform: capitalize;
+                    font-size: 1rem;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: 1fr 1fr 1fr;
+                    justify-items: center;
+                    align-items: center;
+
+                    @media screen and (min-width: 720px) {
+                        //     // réglages pour tablettes
+                        font-size: 1.3rem;
+                    }
+
+                    @media screen and (min-width: 1100px) {
+
+
+                        // réglages pour tablettes
+                        display: grid;
+                        grid-template-columns: 9fr;
+                        grid-gap: 15%;
+
+                        li {
+
+                            margin-bottom: 5%;
+                            height: 100%;
+                        }
+
+
+                    }
+
+                }
+            }
+
+            .years {
+                // padding-bottom: 5%;
+                grid-area: aboutme;
+
+                h3 {
+                    @include subtitle;
+                }
+
                 display: grid;
                 justify-items: center;
-                grid-template-columns: 33% 33% 33%;
-                font-family: $font3 ;
-                text-transform: capitalize;
-                max-width: 90vw;
+                font-family: $font3;
+                width: 90%;
                 margin: 0 auto;
+                margin-bottom: 5%;
+
+
+                ul {
+                    margin: 0 auto;
+                    margin-left: 5%;
+                    position: relative;
+                    font-size: 1.1rem;
+                    font-family: $font3;
+                    color: $white1;
+                    min-width: 100%;
+                    margin-bottom: 5%;
+                    line-height: 2.5rem;
+
+                    @media screen and (min-width: 720px) {
+                        //     // réglages pour tablettes
+                        font-size: 1.3rem;
+                    }
+
+                }
+
+                ul:before {
+                    content: "";
+                    position: absolute;
+                    width: 2px;
+                    height: 90%;
+                    background-color: $white1;
+                    top: 20px;
+                    left: -10px;
+
+                }
 
                 li {
-                    font-size: 1.3rem;
-                    line-height: 3rem;
+                    // margin-left: 5%;
+                    // color: $white2;
+                    font-size: 1rem;
+
+                    @media screen and (min-width: 720px) {
+                        //     // réglages pour tablettes
+                        font-size: 1.3rem;
+                    }
                 }
             }
-        }
-    }
-
-    .about {
-        font-family: $font2;
-        line-height: 2.5rem;
 
 
-        h3 {
-            @include title;
-            margin-top: 100px;
-            margin-bottom: 75px;
-
-        }
-
-        .years {
-            display: grid;
-            justify-items: center;
-            grid-template-columns: 33% 33% 33%;
-            font-family: $font3 ;
-            max-width: 90vw;
-            margin: 0 auto;
-
-
-            ul {
-                margin: 0 auto;
-                margin-left: 5%;
-                position: relative;
-                font-size: 1.3rem;
-                font-family: $font3;
-                color: $white1;
-                max-width: 500px;
-            }
-
-            ul:before {
-                content: "";
-                position: absolute;
-                width: 2px;
-                height: 90%;
-                background-color: $white1;
-                top: 20px;
-                left: -10px;
-            }
-
-            li {
-                margin-left: 5%;
-                color: $white2;
-            }
-        }
-
-        p {
-            color: $white1;
-            font-family: $font3;
-            font-size: 1.4rem;
-            line-height: 3rem;
-            max-width: 80vw;
-            margin: 100px auto;
-            font-style: italic;
         }
 
         button {
+            display: block;
             margin: 0 auto;
             padding: 2em 4em;
             background-color: #161a20;
@@ -409,27 +380,9 @@ main {
             border-radius: 1000px;
             font-family: $font1;
             text-transform: uppercase;
-            position: relative;
             cursor: pointer;
             transition: 0.5s;
             margin-bottom: 75px;
-
-            // pour que l'after se mette bien dans le button
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-            // contour du btn avec un dégradé
-            &:after {
-                content: "";
-                position: absolute;
-                height: 107%;
-                width: 102%;
-                border-radius: 1000px;
-                background-image: linear-gradient(to bottom right, #ffea00, #7e00ec);
-                z-index: -1;
-                transition: transform linear;
-            }
 
             &:hover {
                 z-index: 0;

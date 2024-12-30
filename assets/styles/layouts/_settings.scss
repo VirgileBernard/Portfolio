@@ -40,13 +40,19 @@ $white2: rgb(233, 233, 233);
 
 @mixin subtitle {
     // tous les titres en inter
-    font-family: $font4;
-    color: $white2;
+    font-family: $font1;
+    color: $black1;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.3rem;
     margin-top: 10%;
+    margin-bottom: 5%;
+
+    @media screen and (min-width: 720px) {
+        //     // réglages pour tablettes
+        font-size: 1.5rem;
+    }
 
 }
 

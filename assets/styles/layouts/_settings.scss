@@ -27,12 +27,26 @@ $white2: rgb(233, 233, 233);
 
 
 @mixin title {
-    font-family: $font4;
+    // tous les titres en inter
+    font-family: $font1;
     color: $white2;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-align: center;
     font-size: 1.8rem;
+    margin-bottom: 75px;
+
+}
+
+@mixin subtitle {
+    // tous les titres en inter
+    font-family: $font4;
+    color: $white2;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.3rem;
+    margin-top: 10%;
 
 }
 
